@@ -9,7 +9,7 @@ class Profile(models.Model):
     id_user = models.IntegerField()
     bio = models.TextField(blank=True)
     profileimg = models.ImageField(
-        upload_to='profile_image', default='default_profile_image.jpg')
+    upload_to='profile_image', default='default_profile_image.jpg')
     location = models.CharField(max_length=100, blank=True)
 
 
