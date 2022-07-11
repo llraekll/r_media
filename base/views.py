@@ -15,7 +15,7 @@ def index(request):
     user_profile = Profile.objects.get(user=user_object)
 
     posts = Post.objects.all()
-    return render(request, 'index2.html', {'user_profile': user_profile, 'posts': posts})
+    return render(request, 'index.html', {'user_profile': user_profile, 'posts': posts})
 
 
 @login_required(login_url='signin')
@@ -92,7 +92,7 @@ def signup(request):
                 new_profile = Profile.objects.create(
                     user=user_model, id_user=user_model.id)
                 new_profile.save()
-                return redirect('signup')
+                return redirect('/')
         else:
             messages.info(request, 'Passwords do not match')
             return redirect('signup')
