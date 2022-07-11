@@ -49,14 +49,14 @@
                         <a href="#"
                             class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
                             <ion-icon name="add-circle" class="-mb-1
-                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Picture
+                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon>Upload!   
                         </a>
                          <!-- upload dropdown box -->
                         <div uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small" class="header_dropdown">
     
                             <!-- notivication header -->
                             <div class="px-4 py-3 -mx-5 -mt-4 mb-5 border-b">
-                                <h4>Upload Picture</h4>
+                                <h4>Upload </h4>
                             </div>
     
                             <!-- notification contents -->
@@ -73,7 +73,7 @@
 
                                     <form action="upload" method="POST" enctype="multipart/form-data" >
                                     {% csrf_token %}
-                                    <p class="my-3 leading-6"> Upload pics
+                                    <p class="my-3 leading-6"> Upload photo/video
                                     </p>
                                     <div>
                                         <input type="file" name="image_upload">
@@ -110,7 +110,7 @@
     
                             </div>
                             <div class="px-4 py-3 -mx-5 -mb-4 mt-5 border-t text-sm">
-                                Your Image size Must be Maxmium 999MB
+                                
                             </div>
                         </div>
                         
@@ -144,7 +144,7 @@
 
                         <!-- Messages -->
 
-                        <!-- <a href="#" class="header-links-item">
+                        <!--<a href="#" class="header-links-item">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.5em" height="0.5em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="currentColor"><path d="M2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/></g></svg>
                         </a>
                         <div uk-drop="mode: click;offset: 4" class="header_dropdown">
@@ -167,7 +167,7 @@
 
                             </ul>
                             <a href="#" class="see-all">See all</a>
-                        </div> -->
+                        </div>-->
 
                         <!-- profile -->
 
@@ -202,7 +202,7 @@
                             <!-- post header-->
                             <div class="flex justify-between items-center px-4 py-3">
                                 <div class="flex flex-1 items-center space-x-4">
-                                    <!-- <a href="#">
+                                    <a href="#">
                                         <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">  
                                             <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
