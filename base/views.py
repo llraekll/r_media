@@ -11,16 +11,18 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='signin')
 def index(request):
+    user_object = User.objects.get(username = request.user.username)
+    user_profile = Profile.objects.get(user = user_object)
     return render(request, 'index.html')
 
 
 @login_required(login_url='signin')
 def settings(request):
     user_profile = Profile.objects.get(user=request.user)
-    #Profiling does not work with superuser make sure another user created!
+    # Profiling does not work with superuser make sure another user created!
 
     if request.method == 'POST':
-        
+
         if request.FILES.get('image') == None:
             image = user_profile.profileimg
             bio = request.POST['bio']
@@ -38,10 +40,15 @@ def settings(request):
             user_profile.profileimg = image
             user_profile.bio = bio
             user_profile.location = location
-            user_profile.save() #add a {% csrf_token %} after save in html
-        
+            user_profile.save()  # add a {% csrf_token %} after save in html
+
         return redirect('settings')
     return render(request, 'setting.html', {'user_profile': user_profile})
+
+
+@login_required(login_url='signin')
+def upload(request):
+    return HttpResponse('<h1>Uploaded</h1>')
 
 
 def signup(request):
