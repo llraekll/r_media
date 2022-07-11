@@ -11,11 +11,11 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='signin')
 def index(request):
-    user_object = User.objects.get(username = request.user.username)
-    user_profile = Profile.objects.get(user = user_object)
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
 
-    posts = Post.objects.get(user=user_object)
-    return render(request, 'index.html',{'user_profile': user_profile})
+    posts = Post.objects.all()
+    return render(request, 'index2.html', {'user_profile': user_profile, 'posts': posts})
 
 
 @login_required(login_url='signin')
@@ -56,7 +56,7 @@ def upload(request):
         image = request.FILES.get('image_upload')
         caption = request.POST['caption']
 
-        new_post = Post.objects.create(user = user, image= image, caption= caption)
+        new_post = Post.objects.create(user=user, image=image, caption=caption)
         new_post.save()
 
         return redirect('/')
