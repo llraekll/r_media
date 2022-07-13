@@ -210,7 +210,7 @@
                                             <img src="{{user_profile.profileimg.url}}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div> -->
                                     </a>
-                                    <span class="block capitalize font-semibold "> <a href="#"><b>@{{user.username}}</b></a></span>
+                                    <span> <a href="#"><b>@{{user.username}}</b></a></span>
                                 </div>
                               <div>
                                 <a href="#"> <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 "></i> </a>
@@ -268,10 +268,10 @@
                                             </svg>
                                             {% if post.no_of_likes == 0 %}
                                             <p>{{pass}}</p>
-                                            {% elif post.no_of_like == 1 %}
+                                            {% elif post.no_of_likes == 1 %}
                                             <p>Liked by {{post.no_of_likes}} user </p>
                                             {% else %}
-                                            <p>Liked by {{post.no_of_likes}} users</p>
+                                            <p>Liked by {{post.no_of_likes}} users </p>
                                             {% endif %}
                                         </div>
                                         
