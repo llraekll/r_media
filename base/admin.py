@@ -6,3 +6,5 @@ admin.site.register(Post)
 admin.site.register(LikePost)
 admin.site.register(Followers)
 # Register your models here.
+
+
