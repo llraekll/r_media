@@ -1,4 +1,4 @@
-# R-Soultions
+# R-Media
 ## Python 
 ![alt tag](https://github.com/llraekll/r-shortlinks/blob/main/images/python.png)
 
@@ -37,6 +37,7 @@ This repo can be installed by following the steps below
 ```
 ![alt tag](https://github.com/llraekll/FastAPI/blob/main/images/Heroku.png)
 ### Deploy on Heroku
+WhiteNoise allows your web app to serve its own static files, making it a self-contained unit that can be deployed anywhere without relying on nginx, Amazon S3 or any other external service.
 ```bash
     pip install whitenoise
 ```
