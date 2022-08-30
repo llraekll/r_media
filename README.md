@@ -6,13 +6,13 @@
 ![alt tag](https://github.com/llraekll/r-shortlinks/blob/main/images/dj1.png)
 
 
-A python app built on the framework Django, this is a clone of stack overflow performing all the actions such as 
+A python app built on the framework Django, this is a social media platform performing CRUD oprations- 
 * User sign-up
 * User sign-in
 * User sign-out
-* User profiles can be viewed
-* User profiles can also be edited
-* User can also add and edit bio
+* View user profile
+* Edit user profile
+* Add/edit bio
 
 ![alt tag](https://github.com/llraekll/R_media/blob/main/media/login%20page.png)
 
